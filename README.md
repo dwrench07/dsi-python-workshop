@@ -36,7 +36,7 @@ Topics covered:
 | 10-12     | Work on exercise             |
 | 12-1:15   | Lunch                        |
 | 1:15-2    | Lecture                      |
-| 1:45-5    | Work on assignment           |
+| 2-5       | Work on assignment           |
 
 #### Day 2: Dictionaries and sets
 
@@ -54,7 +54,7 @@ Topics covered:
 | 10-12     | Work on exercise             |
 | 12-1:15   | Lunch                        |
 | 1:15-2    | Lecture                      |
-| 1:45-5    | Work on assignment           |
+| 2-5       | Work on assignment           |
 
 #### Day 3: Object Oriented Programming
 
@@ -70,7 +70,7 @@ Topics covered:
 | 10-12     | Work on exercise             |
 | 12-1:15   | Lunch                        |
 | 1:15-2    | Lecture                      |
-| 1:45-5    | Work on assignment           |
+| 2-5       | Work on assignment           |
 
 #### Day 4: Review
 

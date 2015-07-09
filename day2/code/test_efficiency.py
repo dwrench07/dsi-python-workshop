@@ -17,7 +17,7 @@ def test_common_characters():
     expected = ['a', 'b']
     actual = efficiency.common_characters(s, num)
     n.assert_equal(type(actual), list, 'Need to return a list.')
-    n.assert_equal(set(actual), set(expected), 'Incorrect result.')
+    n.assert_equal(sorted(actual), sorted(expected), 'Incorrect result.')
 
 
 def test_sum_to_zero():
