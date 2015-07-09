@@ -6,22 +6,27 @@ import sys
 class WorldCupResults(object):
 
     def __init__(self, directory):
+        '''
+        INPUT:
+            directory: str
+
+        '''
         self.directory = directory
         self.data = self._read_all(directory)
 
 
-    def _read_all(directory):
+    def _read_all(self, directory):
         '''
-        INPUT: string, string
+        INPUT: string
         OUTPUT: list of tuples
 
-        Given the directory where the data is stored and the team name of interest,
+        Given the directory where the data is stored,
         read the data from the directory and return as a list of tuples.
         '''
         pass
 
 
-    def _read_game_info(filename):
+    def _read_game_info(self, filename):
         '''
         INPUT: string
         OUTPUT: tuple of string, string, string, int, int
@@ -38,7 +43,7 @@ class WorldCupResults(object):
         pass
 
 
-    def _display_game(time, team, other, team_score, other_score):
+    def _display_game(self, time, team, other, team_score, other_score):
         '''
         INPUT: string, string, string, int, int
         OUTPUT: string
@@ -49,7 +54,7 @@ class WorldCupResults(object):
         pass
         
 
-    def display_summary(team, detailed=False):
+    def display_summary(self, team, detailed=False):
         '''
         INPUT: string, bool
         OUTPUT: string
