@@ -19,7 +19,7 @@ Now my dictionary will look like this:
 
 ***Notes:***
 * Dictionaries are unordered! The key, value pairs will not come back to you in the same order you put them in! They could even change order each time you print your dictionary!
-* Dictionary keys must be *mutable*. If you want to make a list a key, just turn it into a tuple!
+* Dictionary keys must be *immutable*. If you want to make a list a key, just turn it into a tuple!
 
 ## Sets
 
