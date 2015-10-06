@@ -93,7 +93,7 @@ from collections import defaultdict
 ```
 
 ```python
-    d = defaultdict()
+    d = defaultdict(list)
     for i, item in enumerate(lst):
         d[item].append(i)
     return d
