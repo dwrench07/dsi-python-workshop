@@ -33,6 +33,7 @@ class Fraction(object):
             self.denom = 1
         else:
             d = gcd(self.num, self.denom)
+            if (self.denom / d) < 0: d = -1 * d
             self.num, self.denom = self.num / d, self.denom / d
         return self
 
