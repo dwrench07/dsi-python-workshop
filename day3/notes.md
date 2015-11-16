@@ -12,7 +12,7 @@ Here's some examples of how to use it:
 ```python
 lib = Library(books=['Grapes of Wrath', 'Pinocchio', '1984'])
 lib.checkout('Pinocchio', 'Johnny')
-lib.checkin('Pinnochio')
+lib.checkin('Pinocchio')
 lib.add_book('The Great Gatsby')
 ```
 
