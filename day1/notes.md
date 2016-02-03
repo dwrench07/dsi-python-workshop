@@ -30,6 +30,41 @@ def sum_absolute_values(L):
     return sum(abs(item) for item in L)
 ```
 
+## Coding examples
+
+Let's look at some harder examples of functions.
+
+```python
+def is_palindrome(word):
+    '''
+    INPUT: str
+    OUTPUT: bool
+
+    Return whether the word is a palindrome (the same forwards and backwards).
+    '''
+    for i in xrange(len(word) / 2):
+        if word[i] != word[-i - 1]:
+            return False
+    return True
+
+
+def get_divisors(numbers, divisors):
+    '''
+    INPUT: list of ints, list of ints
+    OUTPUT: list of ints
+
+    Return a list of the values from the second list that are proper divisors
+    of elements in the first list.
+    '''
+    result = []
+    for d in divisors:
+        for n in numbers:
+            if n % d == 0:
+                result.append(d)
+                break
+    return result
+```
+
 ## Mutable vs Immutable
 
 *Mutable* types are those which can change. *Immutable* types cannot.
@@ -154,41 +189,6 @@ Now the output of the above code block would just be:
 
 ```
 absolute value sum: 11
-```
-
-## Coding examples
-
-Let's look at some harder examples of functions.
-
-```python
-def is_palindrome(word):
-    '''
-    INPUT: str
-    OUTPUT: bool
-
-    Return whether the word is a palindrome (the same forwards and backwards).
-    '''
-    for i in xrange(len(word) / 2):
-        if word[i] != word[-i - 1]:
-            return False
-    return True
-
-
-def get_divisors(numbers, divisors):
-    '''
-    INPUT: list of ints, list of ints
-    OUTPUT: list of ints
-
-    Return a list of the values from the second list that are proper divisors
-    of elements in the first list.
-    '''
-    result = []
-    for d in divisors:
-        for n in numbers:
-            if n % d == 0:
-                result.append(d)
-                break
-    return result
 ```
 
 ## String formatting
