@@ -31,10 +31,10 @@ Topics covered:
 
 | Time      | Activity                     |
 | --------- | ---------------------------- |
-| 8:30-9    | Welcome and Introductions    |
-| 9-10      | Lecture                      |
-| 10-12     | Work on exercise             |
-| 12-1:15   | Lunch                        |
+| 9-9:30    | Welcome and Introductions    |
+| 9:30-10:30      | Lecture                      |
+| 10:30-12:30     | Work on exercise             |
+| 12:30-1:15   | Lunch                        |
 | 1:15-2    | Lecture                      |
 | 2-5       | Work on assignment           |
 
@@ -49,10 +49,10 @@ Topics covered:
 
 | Time      | Activity                     |
 | --------- | ---------------------------- |
-| 8:30-9    | Review Assignment Solutions  |
-| 9-10      | Lecture                      |
-| 10-12     | Work on exercise             |
-| 12-1:15   | Lunch                        |
+| 9-9:30    | Review Assignment Solutions   |
+| 9:30-10:30      | Lecture                      |
+| 10:30-12:30     | Work on exercise             |
+| 12:30-1:15   | Lunch                        |
 | 1:15-2    | Lecture                      |
 | 2-5       | Work on assignment           |
 
@@ -65,10 +65,10 @@ Topics covered:
 
 | Time      | Activity                     |
 | --------- | ---------------------------- |
-| 8:30-9    | Review Assignment Solutions  |
-| 9-10      | Lecture                      |
-| 10-12     | Work on exercise             |
-| 12-1:15   | Lunch                        |
+| 9-9:30    | Review Assignment Solutions   |
+| 9:30-10:30      | Lecture                      |
+| 10:30-12:30     | Work on exercise             |
+| 12:30-1:15   | Lunch                        |
 | 1:15-2    | Lecture                      |
 | 2-5       | Work on assignment           |
 
@@ -81,7 +81,7 @@ Topics covered:
 
 | Time      | Activity                     |
 | --------- | ---------------------------- |
-| 8:30-9    | Review Assignment Solutions  |
-| 9-12      | Final exercise               |
-| 12-1:15   | Lunch                        |
-| 1:15-2    | Review solutions             |
+| 9-9:30    | Review Assignment Solutions  |
+| 9:30-12:30      | Final exercise               |
+| 12:30-1:15   | Lunch                        |
+| 1:45-2:30    | Review solutions             |
