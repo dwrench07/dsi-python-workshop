@@ -54,8 +54,8 @@ Topics covered:
 | 9-9:30    | Review Assignment Solutions   |
 | 9:30-10:30      | Lecture                      |
 | 10:30-12:30     | Work on exercise             |
-| 12:30-1:15   | Lunch                        |
-| 1:15-2    | Lecture                      |
+| 12:30-1:30   | Lunch                        |
+| 1:30-2:15    | Lecture                      |
 | 2-5       | Work on assignment           |
 
 #### Day 3: Object Oriented Programming
@@ -70,8 +70,8 @@ Topics covered:
 | 9-9:30    | Review Assignment Solutions   |
 | 9:30-10:30      | Lecture                      |
 | 10:30-12:30     | Work on exercise             |
-| 12:30-1:15   | Lunch                        |
-| 1:15-2    | Lecture                      |
+| 12:30-1:30   | Lunch                        |
+| 1:30-2:15    | Lecture                      |
 | 2-5       | Work on assignment           |
 
 #### Day 4: Review
