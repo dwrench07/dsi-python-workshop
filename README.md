@@ -1,5 +1,7 @@
 # Python Course
 
+Lecture Slides: https://github.com/zipfian/DSI_Lectures/tree/master/python-workshop (organized by instructor)
+
 ### Prerequisites
 
 This course assumes some familiarity with python. We assume that you have worked with lists, written for loops and defined functions.
