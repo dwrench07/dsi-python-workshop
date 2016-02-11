@@ -14,10 +14,10 @@ def test_repr():
     n.assert_equal(expected, actual, get_message(expected, actual))
 
 
-def test_len():
+def test_length():
     p = Point(3, 4)
     expected = 5.0
-    actual = len(p)
+    actual = p.length()
     n.assert_almost_equal(expected, actual, msg=get_message(expected, actual))
 
 
