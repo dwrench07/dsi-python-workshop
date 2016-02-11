@@ -18,12 +18,6 @@ class Point(object):
         '''
         pass
 
-    def __len__(self):
-        '''
-        Return the length of the vector (squareroot or the two values squared)
-        '''
-        pass
-
     def __eq__(self, other):
         '''
         INPUT:
@@ -59,11 +53,17 @@ class Point(object):
         '''
         pass
 
+    def length(self):
+        '''
+        Return the length of the vector (squareroot of the two values squared)
+        '''
+        pass
+
     def dist(self, other):
         '''
         Return the distance (float) between this point and the other point given.
 
-        Hint: You should use subtract and len!
+        Hint: You should use subtract and length!
         '''
         pass
 
