@@ -86,4 +86,4 @@ Topics covered:
 | 9-9:30    | Review Assignment Solutions  |
 | 9:30-12:30      | Final exercise               |
 | 12:30-1:15   | Lunch                        |
-| 1:45-2:30    | Review solutions             |
+| 1:15-2:00    | Review solutions             |
