@@ -97,7 +97,7 @@ You'll see that at multiple points it says to use an `OrderedDict` instead of a 
     ```python
     In [1]: from code import weather as w
 
-    In [2]: sf = w.MonthlyWeather('SF', 'data/weather/sf.txt')
+    In [2]: sf = w.MonthlyWeather('SF', 'data/weather/sf.tsv')
 
     In [3]: print sf
                        precipitation
