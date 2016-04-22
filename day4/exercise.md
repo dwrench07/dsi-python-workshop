@@ -102,7 +102,7 @@ You'll see that at multiple points it says to use an `OrderedDict` instead of a 
     In [3]: print sf
                        precipitation
     month       temp    days   total
-    01/14      56.55       3    0.06
+    01/14      56.45       3    0.06
     02/14      54.43      13    5.82
     03/14      58.31      11    2.95
     04/14      57.88       6    1.59
@@ -113,6 +113,7 @@ You'll see that at multiple points it says to use an `OrderedDict` instead of a 
     09/14      68.38       2    0.42
     10/14      68.66       3    0.31
     11/14      59.65       7    1.99
+    12/14      56.79      16   10.66
     ```
 
 3. Implement the `WeatherByCity` class. You will need to add several additional methods. As you may notice in the run class, we are particularly interested in having these methods:
