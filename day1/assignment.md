@@ -22,7 +22,7 @@ Jun 14: Belize (3) - Dominican Republic (0)
 Jun 11: Belize (2) - Dominican Republic (1)
          ------------------
 Belize played a total of 4 games.
-2 wins, 0 losses, 2 ties, 2 total goals
+2 wins, 0 losses, 2 ties, 6 total goals
 ------------------------------------
 ```
 
