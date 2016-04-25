@@ -34,8 +34,8 @@ def are_palindromes(words):
     Given a list of strings, return whether ALL of the elements are
     palindromes.
 
-    Hint: add an import statement at the top so you can use the is_palindrome
-    function.
+    Hint: use the is_palindrome function that has been imported at
+    the top of this file
     '''
     pass
 
@@ -45,7 +45,7 @@ def substring(words, substrings):
     INPUT: list, list
     OUTPUT: list
 
-    Given two lists of strings, return the list of strings from the second list
-    are a substring of a string in the first list.
+    Given two lists of strings, return a list of strings from the second list
+    that are a substring of a string in the first list.
     '''
     pass

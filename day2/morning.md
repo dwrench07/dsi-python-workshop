@@ -4,13 +4,13 @@ Today we're going to get comfortable with dictionaries and sets.
 
 ### Part 1: Write some functions
 
-In `dict_exercise.py` you will find some function stubs. You should fill in the functions according to the docstrings.
+In `code/dict_exercise.py` you will find some function stubs. You should fill in the functions according to the docstrings.
 
-1. Fill out the functions in `dict_exercise.py`.
+1. Fill out the functions in `code/dict_exercise.py`.
 
     *Focus on getting a working solution before attempting to modify your solutions to be one liners.*
 
-    Test each function by running `nosetests test_dict.py`.
+    Test each function by running `nosetests code/test_dict.py`.
 
 ### Part 2: Efficiency
 
@@ -18,7 +18,7 @@ In this exercise, we're going to be taking a look at some code that's already wo
 
 The code is written in an inefficient way. We'll start by timing how long it takes with the current implementation, then doing your improvement and timing it again. 
 
-Take a look at the example code in `efficiency.py`. We'll start with the first question.
+Take a look at the example code in `code/efficiency.py`. We'll start with the first question.
 
 1. Run the first example using `%time` in `ipython`. Here is the code to run it:
 

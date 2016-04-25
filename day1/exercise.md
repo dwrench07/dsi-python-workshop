@@ -25,9 +25,9 @@ We're also going to be playing with lists and strings.
     ...
     ```
 
-2. Look for the part of the output that looks like this: `FFFFFF`.
+2. Look for the part of the output that looks like this: `FFFF`.
 
-    Notice that there are 6 `F`'s. This is because there are 6 problems and you have failed all of them (because you haven't written any code yet!).
+    Notice that there are 4 `F`'s. This is because there are 4 problems and you have failed all of them (because you haven't written any code yet!).
 
     If you pass a test, instead of an `F`, you will have a `.`. If your code produces an error, it will be replaced with an `E`.
 
