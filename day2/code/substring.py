@@ -7,7 +7,7 @@ def substring_old(words, substrings):
     OUTPUT: list
 
     Given two lists of strings, return the list of strings from the second list
-    are a substring of a string in the first list.
+    that are a substring of a string in the first list.
 
     The strings in the substrings list are all 3 characters long.
     '''

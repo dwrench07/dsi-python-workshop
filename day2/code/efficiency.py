@@ -40,7 +40,7 @@ def sum_to_zero(lst):
     INPUT: list of ints
     OUTPUT: tuple of two ints
 
-    Return a tupe of two values from the input list that sum to zero.
+    Return a tuple of two values from the input list that sum to zero.
     If none exist, return None.
     '''
 

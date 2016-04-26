@@ -45,7 +45,9 @@ def substring(words, substrings):
     INPUT: list, list
     OUTPUT: list
 
-    Given two lists of strings, return a list of strings from the second list
+    Given two lists of strings, return the list of strings from the second list
     that are a substring of a string in the first list.
+
+    The strings in the substrings list are all 3 characters long.
     '''
     pass

@@ -3,7 +3,7 @@ from math import sqrt
 
 class Point(object):
     '''
-    A Point class
+    A 2d point class
     '''
     def __init__(self, x, y):
         '''
