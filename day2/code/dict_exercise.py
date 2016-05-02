@@ -38,7 +38,7 @@ def dict_difference(d1, d2):
     INPUT: dict, dict
     OUTPUT: dict
 
-    Combine the two dictionaryies, d1 and d2 as follows. They keys are the union of the keys
+    Combine the two dictionaries, d1 and d2 as follows. The keys are the union of the keys
     from each dictionary. If the keys are in both dictionaries then the values should be the
     absolute value of the difference between the two values. If a value is only in one dictionary, the
     value should be the absolute value of that value.
