@@ -167,7 +167,7 @@ def all_divisors(num):
     for i in xrange(1, int(sqrt(num)) + 1):
         if num % i == 0:
             result.append(i)
-            result.add(num / i)
+            result.append(num / i)
     return result
 
 
