@@ -3,7 +3,7 @@
 The file `usd_cad.csv` contains exchange rates from USD to CAD from 2006-2014.
 
 Your job is to write a script which takes in the csv file and outputs:
-* The differences rounded to two decimal places and the count of the number of times each of these difference appears
+* The day-to-day _Conversion rate_ differences rounded to two decimal places and the count of the number of times each of these difference appears
 * The day with the biggest gain.
 
 Your output should look like this:
