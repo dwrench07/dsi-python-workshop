@@ -14,7 +14,7 @@ In `code/dict_exercise.py` you will find some function stubs. You should fill in
 
 ### Part 2: Efficiency
 
-In this exercise, we're going to be taking a look at some code that's already working and figuring out how to improve it using dictionaries.
+In this exercise, we're going to be taking a look at some code that's already working and figuring out how to improve it using dictionaries/sets.
 
 The code is written in an inefficient way. We'll start by timing how long it takes with the current implementation, then doing your improvement and timing it again. 
 
