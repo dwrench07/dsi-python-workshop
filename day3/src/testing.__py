@@ -1,0 +1,3 @@
+import numpy as np
+
+print np.matrix((3,2,1,1))
