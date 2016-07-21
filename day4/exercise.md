@@ -95,7 +95,7 @@ You'll see that at multiple points it says to use an `OrderedDict` instead of a 
     Here's some example code that you should be able to run once you have this implemented (don't worry if you can't get the output as nicely formatted):
 
     ```python
-    In [1]: from code import weather as w
+    In [1]: from src import weather as w
 
     In [2]: sf = w.MonthlyWeather('SF', 'data/weather/sf.tsv')
 
