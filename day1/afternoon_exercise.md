@@ -9,7 +9,7 @@ The file `worldcup.py` contains starter code for your script.
 You will be able to run your script like this:
 
 ```
-python code/worldcup.py data/worldcup Belize
+python src/worldcup.py data/worldcup Belize
 ```
 
 And get results like this:
@@ -30,7 +30,7 @@ Belize played a total of 4 games.
 
 2. Look at the docstrings in `worldcup.py` and look at the test cases in `test_worldcup.py`.
 
-3. Run `test_worldcup.py` with this command: `nosetests code/test_worldcup.py`.
+3. Run `test_worldcup.py` with this command: `nosetests src/test_worldcup.py`.
 
 4. Fill in the functions in `worldcup.py` according to their docstrings. Make sure to run the test suite after each time you complete a function.
 
@@ -38,7 +38,7 @@ Belize played a total of 4 games.
 
     A couple things are already implemented for you! Note how we use the `os` module to get all the files in the directory. You can try running `os.listdir('data/worldcup')` and `os.path.join('data', 'worldcup', '1-1.txt')` in `ipython` to get a sense of what these functions are doing.
 
-5. When completed, verify that you can run your script like this: `python code/worldcup.py data/worldcup Belize` to get the results for Belize. Make sure that it shows each individual game Belize played in as well as the summary.
+5. When completed, verify that you can run your script like this: `python src/worldcup.py data/worldcup Belize` to get the results for Belize. Make sure that it shows each individual game Belize played in as well as the summary.
 
 
 ### Extra Credit
