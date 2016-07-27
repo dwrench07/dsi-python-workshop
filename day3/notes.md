@@ -16,7 +16,7 @@ lib.checkin('Pinocchio')
 lib.add_book('The Great Gatsby')
 ```
 
-You can see the code for the `Library` class in [library.py](code/library.py).
+You can see the code for the `Library` class in [library.py](src/library.py).
 
 #### A little bit of terminology
 
@@ -47,7 +47,7 @@ b = Fraction(2, 3)
 print a + b  # 7/6
 ```
 
-You can find the code for the `Fraction` class in [fraction.py](code/fraction.py)
+You can find the code for the `Fraction` class in [fraction.py](src/fraction.py)
 
 #### Some notes
 
@@ -64,4 +64,4 @@ These methods with names like `__blah__` are called ***magic methods***. Take a 
 
 ## Example 3: World Cup code revisited
 
-It often makes sense to use classes for your programs. Take a look at the new structure of the world cup exercise from day 1 using classes: [worldcup.py](code/worldcup.py)
+It often makes sense to use classes for your programs. Take a look at the new structure of the world cup exercise from day 1 using classes: [worldcup.py](src/worldcup.py)
