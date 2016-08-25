@@ -23,4 +23,4 @@ def test_monthdata():
     exp, act = md.total_precip, 3
     n.assert_equal(exp, act, get_message('total_precip', exp, act))
     exp, act = md.days_precip, 2
-    n.assert_equal(exp, act, get_message('total_precip', exp, act))
+    n.assert_equal(exp, act, get_message('days_precip', exp, act))
