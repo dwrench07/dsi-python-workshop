@@ -6,40 +6,38 @@ We're also going to be playing with lists and strings.
 
 #### Interpretting test output
 
-1. Run the test suite. You can do this by running `nosetests test_practice.py` in the terminal (`iTerm`).
+1. Run the test suite. You can do this by running `make practice` in the terminal (`iTerm`) while in the day1 directory.
 
     You should get something that looks like this:
 
     ```
-    FFFF
-    ======================================================================
-    FAIL: test_practice.test_sum_ints
-    ----------------------------------------------------------------------
-    Traceback (most recent call last):
-      File "/Users/giovanna/anaconda/lib/python2.7/site-packages/nose/case.py", line 197, in runTest
-        self.test(*self.arg)
-      File "/Users/giovanna/github/python-bootcamp/day1/code/test_practice.py", line 11, in test_sum_ints
-        n.assert_equal(result, expected, get_message(result, expected))
-    AssertionError: Incorrect result. You returned None instead of 7.
+    py.test test/unittests_practice.py -vv
+    ================================================================================ test session starts ================================================================================
+    platform darwin -- Python 2.7.12, pytest-2.8.5, py-1.4.31, pluggy-0.3.1 -- /Users/NR/anaconda/bin/python
+    cachedir: test/.cache
+    rootdir: /Users/NR/Desktop/Galvanize/DSR Projects/Update-Tests/python-workshop/day1/test, inifile:
+    collected 4 items
 
+    test/unittests_practice.py::TestPractice::test_1_sum_ints FAILED
+    test/unittests_practice.py::TestPractice::test_2_min_and_max FAILED
+    test/unittests_practice.py::TestPractice::test_3_are_palindromes FAILED
+    test/unittests_practice.py::TestPractice::test_4_substrings FAILED
     ...
     ```
 
-2. Look for the part of the output that looks like this: `FFFF`.
+2. Look for the part of the output that looks like this: `  
+  test/unittests_practice.py::TestPractice::test_1_sum_ints FAILED
+  test/unittests_practice.py::TestPractice::test_2_min_and_max FAILED
+  test/unittests_practice.py::TestPractice::test_3_are_palindromes FAILED
+  test/unittests_practice.py::TestPractice::test_4_substrings FAILED`
 
-    Notice that there are 4 `F`'s. This is because there are 4 problems and you have failed all of them (because you haven't written any code yet!).
+    Notice that there are 4 `FAILED`s. This is because there are 4 problems and you have failed all of them (because you haven't written any code yet!).
 
-    If you pass a test, instead of an `F`, you will have a `.`. If your code produces an error, it will be replaced with an `E`.
+    If you pass a test, instead of an `FAILED`, you will have a `PASSED`.
 
-3. Take a look at this example output: `.FE.` This means:
-    * Q1: correct!
-    * Q2: fail (incorrect result)
-    * Q3: error (code doesn't execute properly)
-    * Q4: correct!
+3. For each question that's not correct, there will be some more details. Note that they won't necessarily be in the same order since `make` shows the tests in alphabetical order
 
-4. For each question that's not correct, there will be some more details. Note that they won't necessarily be in the same order since `nose` first shows the errors, then the failed tests.
-
-5. For failed tests, look for the line which says: `AssertionError:`. Here you will see your output and the expected output.
+4. For failed tests, look for the line which says: `AssertionError:`. Here you will see your output and the expected output.
 
 #### Write some functions
 

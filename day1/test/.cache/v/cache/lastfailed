@@ -1,0 +1,6 @@
+{
+  "unittests_practice.py::TestPractice::test_1_sum_ints": true, 
+  "unittests_practice.py::TestPractice::test_2_min_and_max": true, 
+  "unittests_practice.py::TestPractice::test_3_are_palindromes": true, 
+  "unittests_practice.py::TestPractice::test_4_substrings": true
+}
