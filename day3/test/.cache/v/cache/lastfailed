@@ -1,9 +1,0 @@
-{
-  "unittests_point.py::TestDictExercise::test_add": true, 
-  "unittests_point.py::TestDictExercise::test_dist": true, 
-  "unittests_point.py::TestDictExercise::test_eq": true, 
-  "unittests_point.py::TestDictExercise::test_length": true, 
-  "unittests_point.py::TestDictExercise::test_mul": true, 
-  "unittests_point.py::TestDictExercise::test_repr": true, 
-  "unittests_point.py::TestDictExercise::test_sub": true
-}
