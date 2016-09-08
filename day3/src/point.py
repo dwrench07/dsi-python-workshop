@@ -44,10 +44,10 @@ class Point(object):
         '''
         pass
 
-    def __mul__(self, other):
+    def __mul__(self, factor):
         '''
         INPUT:
-            - other: int/float
+            - factor: int/float
         Return a new Point which multiplies both the x and y coordinate values
         by the given value.
         '''
