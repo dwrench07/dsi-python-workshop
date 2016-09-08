@@ -55,7 +55,7 @@ class Point(object):
 
     def length(self):
         '''
-        Return the length of the vector (squareroot of the two values squared)
+        Return the length of the vector (squareroot of the sum of the squares of the components)
         '''
         pass
 
