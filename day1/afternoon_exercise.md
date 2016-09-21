@@ -30,7 +30,7 @@ Belize played a total of 4 games.
 
 2. Look at the docstrings in `worldcup.py` and look at the test cases in `test_worldcup.py`.
 
-3. Run `test_worldcup.py` with this command: `nosetests src/test_worldcup.py`.
+3. Run tests with this command: `make worldcup` while in the home (day1) directory.
 
 4. Fill in the functions in `worldcup.py` according to their docstrings. Make sure to run the test suite after each time you complete a function.
 
