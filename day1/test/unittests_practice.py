@@ -18,7 +18,7 @@ class TestPractice(unittest.TestCase):
         result = practice.min_and_max([10, -5, 3, -14, 8])
         answer = (3, -14)
         self.assertEqual(result, answer)
-        answer = practice.min_and_max([])
+        result = practice.min_and_max([])
         self.assertIsNone(result)
 
     def test_3_are_palindromes(self):
