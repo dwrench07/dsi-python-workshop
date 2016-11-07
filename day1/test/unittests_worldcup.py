@@ -3,7 +3,7 @@ To run the tests: go to the root directory, day1
 run `make test`
 '''
 from __future__ import division
-import unittest as unittes
+import unittest as unittest
 from src import worldcup as worldcup
 
 
