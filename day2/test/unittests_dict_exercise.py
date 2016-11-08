@@ -32,7 +32,7 @@ class TestDictExercise(unittest.TestCase):
 
         actual = dict_exercise.dict_difference(d1, d2)
         self.assertIsInstance(actual, dict)
-        self.assert_equal(actual, answer)
+        self.assertEqual(actual, answer)
 
 if __name__ == '__main__':
     unittest.main()
