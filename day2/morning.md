@@ -10,7 +10,7 @@ In `src/dict_exercise.py` you will find some function stubs. You should fill in 
 
     *Focus on getting a working solution before attempting to modify your solutions to be one liners.*
 
-    Test each function by running `nosetests src/test_dict.py`.
+    Test each function by running `make dict_exercise` in the main day2 directory.
 
 ### Part 2: Efficiency
 
@@ -35,7 +35,7 @@ Take a look at the example code in `src/efficiency.py`. We'll start with the fir
 
 2. Make your improvements to the `invalid_words` function. You will need to run `reload(efficiency)` in `ipython` to get the updated version.
 
-    Make sure you didn't change the functionality of the functions by running `nosetests test_efficiency.py`.
+    Make sure you didn't change the functionality of the functions by running `make efficiency`.
 
     Time timing it again. Is it faster?
 
@@ -72,7 +72,7 @@ Look at the divisors example from lecture for inspiration.
 
 1. Fill out the function in `substring.py`. Put in both your old and your new version so that you can compare them.
 
-2. Run `nosetests test_substring.py` to make sure that both versions work properly.
+2. Run `make substring` to make sure that both versions work properly.
 
 3. Use `%time` to see if it's improved in efficiency! Figure out an example input that's sufficiency large that you'll be able to test the difference.
 
