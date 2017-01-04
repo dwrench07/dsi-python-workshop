@@ -12,7 +12,7 @@ class TestSubstring(unittest.TestCase):
     def run_substring(self, func):
         words = ['elephant', 'lion', 'giraffe', 'zebra']
         substrings = ['ion', 'pig', 'eta', 'raz', 'lep']
-        result = substring.substring_old(words, substrings)
+        result = func(words, substrings)
         expected = ['ion', 'lep']
         self.assertIsInstance(result, list)
         self.assertEqual(set(result), set(expected))
