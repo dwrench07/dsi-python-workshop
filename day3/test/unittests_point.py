@@ -1,6 +1,6 @@
 '''Unit Tests for DS python-workshop/day1
 To run the tests: go to the root directory, day1
-run `make test`
+run `make point`
 '''
 from __future__ import division
 import unittest as unittest
@@ -40,7 +40,7 @@ class TestPoint(unittest.TestCase):
         p2 = Point(6, 7)
         actual = p2 - p1
         self.assertEqual(actual.x, 4)
-        self.assert_equal(actual.y, 2)
+        self.assertEqual(actual.y, 2)
 
     def test_mul(self):
         p1 = Point(2, 5)
