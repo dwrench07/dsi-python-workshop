@@ -1,21 +1,22 @@
-def dict_to_str(d):
-    '''
-    INPUT: dict
-    OUTPUT: str
+def dict_to_text(input_dict):
+    """Return a str containing each key and value in dict d.
 
-    Return a str containing each key and value in dict d. Keys and values are
-    separated by a colon and a space. Each key-value pair is separated by a new
-    line.
+    Keys and values are separated by a colon and a space.
+    Each key-value pair is separated by a new line.
 
-    For example:
-    a: 1
-    b: 2
+    Parameters
+    ----------
+    input_dict : dict
 
-    For nice pythonic code, use iteritems!
+    Returns
+    -------
+    output_text : str
 
-    Note: it's possible to do this in 1 line using list comprehensions and the
-    join method.
-    '''
+    Examples
+    -------
+    >>> dict_to_str({'a': 1, 'b': 2})
+    "a: 1\nb: 2"
+    """
     pass
 
 
