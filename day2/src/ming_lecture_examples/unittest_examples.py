@@ -4,30 +4,22 @@ from collections import Counter
 
 class TestExamples(unittest.TestCase):
 
+    @classmethod
+    def setUpClass(cls):
+        """Run before testing begins."""
+        pass
+
     def setUp(self):
-        '''
-        Runs before every test.
-        '''
+        """Run before each test."""
         pass
 
     def tearDown(self):
-        '''
-        Runs after every test.
-        '''
-        pass
-
-    @classmethod
-    def setUpClass(cls):
-        '''
-        Runs before everything.
-        '''
+        """Run after each test."""
         pass
 
     @classmethod
     def tearDownClass(cls):
-        '''
-        Runs after everything.
-        '''
+        """Run after all tests are complete."""
         pass
 
     def test_read_input(self):
