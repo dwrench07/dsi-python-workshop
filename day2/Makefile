@@ -7,4 +7,4 @@ efficiency:
 	py.test --pep8 src/efficiency.py
 substring:
 	py.test test/unittests_substring.py
-	py.test -- pep8 src/substring.py
+	py.test --pep8 src/substring.py
