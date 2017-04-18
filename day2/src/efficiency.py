@@ -5,7 +5,7 @@
 from string import punctuation
 
 
-def count_invalid_words(valid_words, document_filename):
+def find_invalid_words(valid_words, document_filename):
     """Return a list of invalid words found in the specified file.
 
     Parameters
@@ -21,13 +21,13 @@ def count_invalid_words(valid_words, document_filename):
     of words from the document that are not valid words.
     """
     with open(document_filename) as doc:
-        result = []
+        invalid_words = []
         for line in doc:
             words = line.strip().split()
             for word in words:
                 if word.lower().strip(punctuation) not in valid_words:
-                    result.append(word)
-        return result
+                    invalid_words.append(word)
+        return invalid_words
 
 
 def find_common_characters(input_string, num):
@@ -46,9 +46,9 @@ def find_common_characters(input_string, num):
     common_characters = []
     for char in input_string:
         if input_string.count(char) > num:
-            if char not in result:
+            if char not in common_characters:
                 common_characters.append(char)
-    return result
+    return common_characters
 
 
 def sum_to_zero(lst):

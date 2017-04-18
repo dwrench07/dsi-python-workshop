@@ -1,10 +1,9 @@
-'''Unit Tests for DS python-workshop/day1
-To run the tests: go to the root directory, day1
-run `make test`
-'''
+"""Unit Tests for DS python-workshop/day2."""
+
+
 from __future__ import division
 import unittest as unittest
-from src import dict_exercise as dict_exercise
+from src import dict_exercise
 
 
 class TestDictExercise(unittest.TestCase):
