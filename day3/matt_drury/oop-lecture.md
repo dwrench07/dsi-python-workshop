@@ -29,7 +29,7 @@ Classes are a popular way of accomplishing all of these goals, and it is Python'
 
 ## Basic Example: Lists
 
-Python `list`s and `dictionary`-ies are a very useful type of data structure, and they have lot's of associated algorithms 
+Python `list`s are a very useful type of data structure, and they have lot's of associated algorithms.  Let's take a closer look a lists and how they work.
 
 ### Methods
 
@@ -106,7 +106,7 @@ print(lst.__getitem__(2))
     #    2
     #    2
 
-The `__getitem__` is called a **magic method**.  There are spelled with two underscores and can be called with special syntax.
+The `__getitem__` is called a **magic method**.  There are spelled with two underscores and can be called with special syntax, which lead to thier other common name: **dunder maethods**.  This one would be pronounced "dunder-get-item".
 
 Other magic methods can be used in place of setting by index, slicing an object, or getting the length of an object.
 
@@ -138,7 +138,7 @@ from collections import defaultdict, OrderedDict
 
 ### defaultdict
 
-`defautdict` is a simple but effective alternative to a dictionary.
+`defautdict` is a simple but effective alternative to a dictionary that adds a touch of extra functionality which can save lots of work in some relatively common situations.
 
 Recall that with a normal dictionary, attempting to lookup a key that does not exist is an error.
 
@@ -163,28 +163,25 @@ D['c']
 A `defaultdict` allows you to specify a default value to return when a non-existent key lookup is attempted.
 
 ```python
-D = defaultdict(lambda: 0, {'a': 1, 'b': 2})
-```
+def default():
+    """A function that returns a default value, called when we attempt to
+    access a non-existent key in a default dictionary.
+    """
+    return 0
 
-```python
-D['a']
-```
-
-    #    1
-
-```python
-D['c']
-```
-
-    #    0
-
-```python
+D = defaultdict(default, {'a': 1, 'b': 2})
+print(D['a'])
+print(D['c'])
 print(D)
 ```
-
+    #    1
+    #    0
     #    defaultdict(<function <lambda> at 0x104773050>, {'a': 1, 'c': 0, 'b': 2})
 
-It's a bit weird to have to pass in a function that returns the default value instead of the default value itself, but this is needed to avoid weird problems arising from mutable objects like lists.
+
+Note: It's a bit weird to have to pass in a function that returns the default value instead of the default value itself, but this is needed to avoid weird problems arising from mutable objects like lists.
+
+Note: In our creation of the default dict above, the line `D = defaultdict(int, {'a': 1, 'b': 2})` is more idomatic.  We chose to write it the way we did above as it makes more explicit what is going on.
 
 In summary, this works as intended:
 
@@ -531,6 +528,9 @@ MD = MyDefaultDict(lambda: 0, {'a': 1, 'b': 2})
 
 ```python
 print(len(MD))
+```
+
+    #    2
 
 ```python
 print('a' in MD)
@@ -576,7 +576,7 @@ class QuadraticPolynomial(object):
         return a2 * x * x + a1 * x + a0
 ```
 
-### Programming Together:
+### Programming Together
 
 1. Use the `__add__` magic method to allow something like `QuadraticPolynomial(1, 1, 1) + QuadraticPolynomial(1, 0, 1)`.  The new method should *return* another `QuadraticPolynomial`.
 
@@ -651,8 +651,8 @@ def polynomial_factory(coefficients):
 
 ### Exercise
 
-Implement a general 'Polynomial` class, that can handle any degree polynomial.
+Implement a general `Polynomial` class, that can handle any degree polynomial.
 
   - What extra data will you need to store on each instance?
   - Do we need any new methods to handle this case?
-  - What happens if we try to add a `Polynomial` object to another type of object, say an integer?  Should this work?  If so, how can we make it work properly?
+  - What happens if we try to add a `Polynomial` object to another type of object, say an integer?  Should this work?  If not, how can we make it work properly?
