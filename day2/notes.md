@@ -49,7 +49,7 @@ To motivate defaultdicts and counters, let's take a look at an example.
 Say I want to know all the indicies that each item in a list appears. Here's the code using a standard dictionary:
 
 ```python
-def item_indices(lst):
+def get_item_indices(lst):
     """Return a dictionary containing the indices of each item in the list.
  
     In the returned dictionary, the keys are the items in the list, and
@@ -67,7 +67,7 @@ def item_indices(lst):
 Here's the results of running this function on an example:
 
 ```python
-In [2]: item_indices(['a', 'b', 'b', 'c', 'a'])
+In [2]: get_item_indices(['a', 'b', 'b', 'c', 'a'])
 Out[2]: {'a': [0, 4], 'b': [1, 2], 'c': [3]}
 ```
 
