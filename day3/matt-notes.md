@@ -43,9 +43,9 @@ print(lst.count(3))
 
 print(lst)
 ```
-    2
-    1
-    [1, 2, 2, 3, 4, 4, 4]
+>    2
+>    1
+>    [1, 2, 2, 3, 4, 4, 4]
 
 The `count` function is associated with the `list` data type.
 
@@ -70,8 +70,8 @@ lst.append(5)
 
 print(lst)
 ```
-    [1, 2, 2, 3, 4, 4, 4]
-    [1, 2, 2, 3, 4, 4, 4, 5]
+>    [1, 2, 2, 3, 4, 4, 4]
+>    [1, 2, 2, 3, 4, 4, 4, 5]
 
 Methods which do **not** change the underlying data (`list.count`) are called **pure methods**, methods that *do* change the underlying data (`list.append`) are called **impure methods**.
 
@@ -82,16 +82,16 @@ tup = (1, 2, 3)
 tup[2] = 4
 ```
 
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    <ipython-input-4-584a888776e5> in <module>()
-          1 tup = (1, 2, 3)
-    ----> 2 tup[2] = 4
-    
-
-    TypeError: 'tuple' object does not support item assignment
+>    ---------------------------------------------------------------------------
+>
+>    TypeError                                 Traceback (most recent call last)
+>
+>    <ipython-input-4-584a888776e5> in <module>()
+>          1 tup = (1, 2, 3)
+>    ----> 2 tup[2] = 4
+>    
+>
+>    TypeError: 'tuple' object does not support item assignment
 
 
 ### Magic Methods
@@ -103,8 +103,8 @@ print(lst[2])
 
 print(lst.__getitem__(2))
 ```
-    2
-    2
+>    2
+>    2
 
 The `__getitem__` is called a **magic method**.  There are spelled with two underscores and can be called with special syntax.
 
@@ -123,9 +123,9 @@ print lst.__getslice__(1, 5)
 # len(lst)
 print(lst.__len__())
 ```
-    100
-    [2, 100, 3, 4]
-    8
+>    100
+>    [2, 100, 3, 4]
+>    8
 
 
 ## More Advanced Examples
@@ -148,17 +148,17 @@ D = {'a': 1, 'b': 2}
 D['c']
 ```
 
-    ---------------------------------------------------------------------------
-
-    KeyError                                  Traceback (most recent call last)
-
-    <ipython-input-18-d8c10fe02c26> in <module>()
-          1 D = {'a': 1, 'b': 2}
-          2 
-    ----> 3 D['c']
-    
-
-    KeyError: 'c'
+>    ---------------------------------------------------------------------------
+>
+>    KeyError                                  Traceback (most recent call last)
+>
+>    <ipython-input-18-d8c10fe02c26> in <module>()
+>          1 D = {'a': 1, 'b': 2}
+>          2 
+>    ----> 3 D['c']
+>    
+>
+>    KeyError: 'c'
 
 A `defaultdict` allows you to specify a default value to return when a non-existent key lookup is attempted.
 
@@ -170,19 +170,19 @@ D = defaultdict(lambda: 0, {'a': 1, 'b': 2})
 D['a']
 ```
 
-    1
+>    1
 
 ```python
 D['c']
 ```
 
-    0
+>    0
 
 ```python
 print(D)
 ```
 
-    defaultdict(<function <lambda> at 0x104773050>, {'a': 1, 'c': 0, 'b': 2})
+>    defaultdict(<function <lambda> at 0x104773050>, {'a': 1, 'c': 0, 'b': 2})
 
 It's a bit weird to have to pass in a function that returns the default value instead of the default value itself, but this is needed to avoid weird problems arising from mutable objects like lists.
 
@@ -200,8 +200,8 @@ D['b'].append(1)
 print(D)
 ```
 
-    []
-    defaultdict(<type 'list'>, {'a': [1, 2], 'b': [1]})
+>    []
+>    defaultdict(<type 'list'>, {'a': [1, 2], 'b': [1]})
 
 
 ## Making Your Own Default Dict
@@ -228,7 +228,7 @@ from inspect import isclass
 isclass(defaultdict)
 ```
 
-    True
+>    True
 
 Using the class `defaultdict` as a function creates an instance of that class.
 
@@ -239,7 +239,7 @@ Note: The process of using the class itself as a function is called **constructi
 D = defaultdict(lambda: 0, {'a': 1, 'b': 2})
 isinstance(D, defaultdict)
 ```
-    True
+>    True
 
 We usually abbreviate the phrase
 
@@ -263,7 +263,7 @@ my_instance = MyClass()
 isinstance(my_instance, MyClass)
 ```
 
-    True
+>    True
 
 This is a pretty dumb class as it stands, it cant really *do* anything.  To get something useful we have to add data and behaviour to our class.
 
@@ -294,9 +294,9 @@ print(MD.default())
 print(MD.dictionary)
 ```
 
-    <function <lambda> at 0x1046d6aa0>
-    0
-    {'a': 1, 'b': 2}
+>    <function <lambda> at 0x1046d6aa0>
+>    0
+>    {'a': 1, 'b': 2}
 
 When we use a class, it is to create *instances of that class*, which we then work with.  We very rarely work with the class directly, and we will often be working with more than one instance of a single class.
 
@@ -308,8 +308,8 @@ print(MD.dictionary)
 print(MD2.dictionary)
 ```
 
-    {'a': 1, 'b': 2}
-    {'a': 2, 'c': 5, 'b': 3}
+>    {'a': 1, 'b': 2}
+>    {'a': 2, 'c': 5, 'b': 3}
 
 Note the important point: **Both** `MD` and `MD2` are instances of the **same class**, but they contain **different data**; they are **independent objects of the same type.**.
 
@@ -381,9 +381,9 @@ MD['c'] = 3
 print(MD.dictionary)
 ```
 
-    1
-    2
-    {'a': 1, 'c': 3, 'b': 2}
+>    1
+>    2
+>    {'a': 1, 'c': 3, 'b': 2}
 
 Let's deconstruct one of these calls:
 
@@ -444,10 +444,10 @@ print(MD['c'])
 print(MD.dictionary)
 ```
 
-    1
-    2
-    0
-    {'a': 1, 'c': 0, 'b': 2}
+>    1
+>    2
+>    0
+>    {'a': 1, 'c': 0, 'b': 2}
 
 
 ### Adding Other Dict-y Things
@@ -458,15 +458,15 @@ A few things that should work for dictionaries still don't work for our new data
 len(MD)
 ```
 
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    <ipython-input-79-9aab7d873478> in <module>()
-    ----> 1 len(MD)
-    
-
-    TypeError: object of type 'MyDefaultDict' has no len()
+>    ---------------------------------------------------------------------------
+>
+>    TypeError                                 Traceback (most recent call last)
+>
+>    <ipython-input-79-9aab7d873478> in <module>()
+>    ----> 1 len(MD)
+>    
+>
+>    TypeError: object of type 'MyDefaultDict' has no len()
 
 It seems obvious what we should do here, the `len` of our datatype should be the `len` of the dictionary that we stored, but we must *tell* python this is the case.
 
@@ -534,15 +534,15 @@ print(len(MD))
 print('a' in MD)
 ```
 
-    True
+>    True
 
 ```python
 for key in MD:
     print key, MD[key]
 ```
 
-    a 1
-    b 2
+>    a 1
+>    b 2
 
 ### OrderedDict
 
@@ -626,7 +626,6 @@ class QuadraticPolynomial(object):
         return LinearPolynomial(a1, 2 * a2)
 ```
 
-
 ```python
 class LinearPolynomial(object):
     
@@ -636,7 +635,6 @@ class LinearPolynomial(object):
     def __str__(self):
         return "{}x + {}".format(self.coefficients[1], self.coefficients[0])
 ```
-
 
 ```python
 def polynomial_factory(coefficients):
