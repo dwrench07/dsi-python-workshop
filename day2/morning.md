@@ -10,7 +10,7 @@ In `src/dict_exercise.py` you will find some function stubs. You should fill in 
 
     *Focus on getting a working solution before attempting to modify your solutions to be one liners.*
 
-    Test each function by running `make dict_exercise` in the main day2 directory.
+    Test each function by running `py.test` in the main day2 directory.
 
 ### Part 2: Efficiency
 
