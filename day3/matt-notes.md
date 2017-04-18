@@ -47,13 +47,13 @@ print(lst)
     1
     [1, 2, 2, 3, 4, 4, 4]
 
-The `count` function is assoicated with the `list` data type.
+The `count` function is associated with the `list` data type.
 
 Functions that are associated to a specific data type in this way are called *methods*.  So we would say
 
 > `count` is a method of the data type `list`
 
-Methods are (generally) called using the `.` notataion:
+Methods are (generally) called using the `.` notation:
 
 ```python
 data_element.method(additional_arguments)
@@ -160,7 +160,7 @@ D['c']
 
     KeyError: 'c'
 
-A `defaultdict` allows you to specify a default value to return when a non-existant key lookup is attempted.
+A `defaultdict` allows you to specify a default value to return when a non-existent key lookup is attempted.
 
 ```python
 D = defaultdict(lambda: 0, {'a': 1, 'b': 2})
@@ -184,7 +184,7 @@ print(D)
 
     defaultdict(<function <lambda> at 0x104773050>, {'a': 1, 'c': 0, 'b': 2})
 
-It's a bit weird to have to pass in a function that returns the defualt value instead of the default value itself, but this is needed to avoid weird problems arising from mutable objects like lists.
+It's a bit weird to have to pass in a function that returns the default value instead of the default value itself, but this is needed to avoid weird problems arising from mutable objects like lists.
 
 In summary, this works as intended:
 
@@ -208,11 +208,11 @@ print(D)
 
 Let's implement our own default dictionaries.
 
-**Note:** In practice, we would not do this.  Since the `defaultdict` datatype already exists, there is no benifit in reimplementing it.  But it's instructional to see how we could do this if our needs were for something slightly different.
+**Note:** In practice, we would not do this.  Since the `defaultdict` datatype already exists, there is no benefit in reimplementing it.  But it's instructional to see how we could do this if our needs were for something slightly different.
 
 There are two concepts we need
 
-  - A `class` is a template for a new data type.  It contains inforamtion on what data is needed to construct the data type, how to store the data internally, and what algorithms can be applied to the data type.
+  - A `class` is a template for a new data type.  It contains information on what data is needed to construct the data type, how to store the data internally, and what algorithms can be applied to the data type.
   - An instance of a class is a concrete object of the new data type.
   
 A class is a recipe for constructing instances of that class.
@@ -269,7 +269,7 @@ This is a pretty dumb class as it stands, it cant really *do* anything.  To get 
 
 The first step is to determine what data we need to store.  In this case it's pretty easy, we need
 
-  - The underlying dictionary that we are going to attempt lokups into.
+  - The underlying dictionary that we are going to attempt lookups into.
   - The default action to take when a lookup fails.
 
 Let's mimic the way Python's built in default dict works.  We need to add some functionality to **supply and then store** both of these data elements when we create an instance of the class.  This is done using a special *method*, `__init__`.
@@ -338,7 +338,7 @@ some_object.some_method(an_argument, another_argument)
 
 any references to `self` inside the definition of `some_method` will refer to `some_object`.
 
-### Addding Methods to Manipulate Data in a Class
+### Adding Methods to Manipulate Data in a Class
 
 Let's implement `__getitem__` and `__setitem__`, which will allow us to index into instances of our class like this
 
@@ -391,7 +391,7 @@ Let's deconstruct one of these calls:
 MD['a']
 ```
 
-This is equivelent to the following call to `__getitem__`:
+This is equivalent to the following call to `__getitem__`:
 
 ```python
 MD.__getitem__('a')
@@ -519,7 +519,7 @@ We have a few new methods:
 
   - `__len__` allows our datatype to support calls to `len`.
   - `__contains__` allows our datatype to support the `in` keyword.
-  - `__iter__` allows our datatype to supprt iteration, i.e., for loops.  The `yield` keyword here is new, and it is a powerful feature of python you will see often.  You should find some time to read about it [here](http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python).
+  - `__iter__` allows our datatype to support iteration, i.e., for loops.  The `yield` keyword here is new, and it is a powerful feature of python you will see often.  You should find some time to read about it [here](http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python).
 
 Let's try out our new features.
 
@@ -546,9 +546,9 @@ for key in MD:
 
 ### OrderedDict
 
-The `OrderedDict` type is a dictionary that remembers te order that keys are added.  While a basic dictionary has no order - iterating over a regular dictinary will access the key, values in a random order, iterating through a `OrderedDict` will access the keys in the same order that they were added.
+The `OrderedDict` type is a dictionary that remembers the order that keys are added.  While a basic dictionary has no order - iterating over a regular dictionary will access the key, values in a random order, iterating through a `OrderedDict` will access the keys in the same order that they were added.
 
-Your task is to **implement an ordered dictionary**.  Here are some qustions to ask yourself:
+Your task is to **implement an ordered dictionary**.  Here are some questions to ask yourself:
 
   - What data will you store on each instance.  Clearly you need a `dictionary`, just like in `defaultdict`.  How are you going to remember the order that keys were added to the dictionary?
   - What methods will you need to implement.  Which one is the important one, i.e., the one that adds the new and interesting behaviour?
