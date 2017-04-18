@@ -50,13 +50,11 @@ Say I want to know all the indicies that each item in a list appears. Here's the
 
 ```python
 def item_indices(lst):
-    '''
-    INPUT: list
-    OUTPUT: dict
-
-    Return a dictionary whose keys are the items in the list and associated
-    value is a list of all the indices where that key appears.
-    '''
+    """Return a dictionary containing the indices of each item in the list.
+ 
+    In the returned dictionary, the keys are the items in the list, and
+    the values are the indices where the items represented by the keys appear.
+    """
     d = {}
     for i, item in enumerate(lst):
         if item in d:
@@ -84,7 +82,7 @@ Note that I have to do something different if it's the first time I see the item
 
 The `get` method will return the value of `item` if it's in the dictionary. If it isn't, it will return the empty list.
 
-But there's an even better way! We can use a `defaultdict`. In a `defaultdict`, if we try to access a key we've never seen before, there is a default value that it gets. We just need to tell it what our default is.
+But there's an even better way! We can use a `defaultdict`. In a `defaultdict`, if we try to access a key we've never seen before, the key will be added with a default value that we specify. We just need to tell it what our default is.
 
 We will need to import it first:
 
@@ -108,14 +106,18 @@ A very common default value is an integer. So Python has a special type of defau
 Here's what we would need to do with a standard dictionary:
 
 ```python
-def count_items(lst):
-    '''
-    INPUT: list
-    OUTPUT: dict
+def count_items(input_list):
+    """Return a dictionary with counts of the items in input_list.
+    
+    Parameters
+    ----------
+    input_list : list
 
-    Return a dictionary whose keys are the items in the list and associated
-    value is the count of the number of times that item occurred in the list.
-    '''
+    Returns
+    -------
+    item_counts : dict
+        Counts of the items in input_list, as {item: count}.
+    """
     d = {}
     for i, item in enumerate(lst):
         if item in d:
@@ -156,13 +158,18 @@ Let's take another look at one of the examples we did yesterday, the divisors pr
 from math import sqrt
 
 
-def all_divisors(num):
-    '''
-    INPUT: int
-    OUTPUT: list of ints
+def find_all_divisors(num):
+    """Return a list of all the divisors of num.
+ 
+    Parameters
+    ----------
+    num : int
 
-    Given an integer, return a list of all the divisors of that number.
-    '''
+    Returns
+    -------
+    list
+        Contains all the divisors of num.
+    """
     result = [num]
     for i in xrange(1, int(sqrt(num)) + 1):
         if num % i == 0:
@@ -171,14 +178,24 @@ def all_divisors(num):
     return result
 
 
-def get_divisors(numbers, divisors):
-    '''
-    INPUT: list of ints, list of ints
-    OUTPUT: list of ints
-
+def get_divisors(numbers, potential_divisors):
+    """
     Return a list of the values from the second list that are proper divisors
     of elements in the first list.
-    '''
+    
+    Arguments
+    ---------
+    numbers : list
+        A list of integers.
+    potential_divisors : list
+        A list of integers that may be divisors of elements in numbers.
+    
+    Returns
+    -------
+    divisors : list
+        A list of items in potential_divisors that are divisors of elements
+        in numbers. 
+    """
     s = set()
     for num in numbers:
         s.update(all_divisors(num))
@@ -214,16 +231,23 @@ If instead I wanted only the divisors which divide at least 2 values, this would
 ```python
 from collections import Counter
 
-def top_divisors(numbers, divisors):
-    '''
-    INPUT: list of ints, list of ints
-    OUTPUT: list
+def find_top_divisors(numbers, potential_divisors):
+    """Return a list of the divisors which divide at least 2 of the numbers.
+    
+    Arguments
+    ---------
+    numbers : list
+        List of integers.    
+    potential_divisors : list
+        List of integers that may be divisors of items in numbers.
 
-    Return a list of the divisors which divide at least 2 of the numbers.
-    '''
+    Returns
+    -------
+    top_divisors : list
+    """
     d = Counter()
     for num in numbers:
-        for divisor in all_divisors(num):
+        for divisor in find_all_divisors(num):
             d[divisor] += 1
-    return [divisor for divisor in divisors if d[divisor] >= 2]
+    return [divisor for divisor in potential_divisors if d[divisor] >= 2]
 ```

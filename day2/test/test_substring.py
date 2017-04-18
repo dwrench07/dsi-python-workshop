@@ -1,10 +1,11 @@
-'''Unit Tests for DS python-workshop/day1
-To run the tests: go to the root directory, day1
-run `make test`
-'''
+"""Unit Tests for DS python-workshop/day2.
+
+Run py.test from the day2 directory."""
+
+
 from __future__ import division
 import unittest as unittest
-from src import substring as substring
+from src import substring
 
 
 class TestSubstring(unittest.TestCase):
@@ -22,6 +23,7 @@ class TestSubstring(unittest.TestCase):
 
     def test_subtring_new(self):
         self.run_substring(substring.substring_new)
+
 
 if __name__ == '__main__':
     unittest.main()

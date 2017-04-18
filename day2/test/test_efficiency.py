@@ -1,27 +1,28 @@
-'''Unit Tests for DS python-workshop/day1
-To run the tests: go to the root directory, day1
-run `make test`
-'''
+"""Unit Tests for DS python-workshop/day2.
+
+Run py.test from the day2 directory."""
+
+
 from __future__ import division
 import unittest as unittest
 from collections import Counter
-from src import efficiency as efficiency
+from src import efficiency
 
 
 class TestEfficiency(unittest.TestCase):
 
-    def test_count_invalid_words(self):
+    def test_find_invalid_words(self):
         words = ['a', 'b', 'c']
         answer = ['d', 'd', 'e']
-        actual = efficiency.invalid_words(words, 'data/tiny.txt')
+        actual = efficiency.find_invalid_words(words, 'data/tiny.txt')
         self.assertIsInstance(actual, list)
         self.assertEqual(Counter(actual), Counter(answer))
 
-    def test_common_characters(self):
+    def test_find_common_characters(self):
         s = 'abcaabbdad'
         num = 2
         answer = ['a', 'b']
-        actual = efficiency.common_characters(s, num)
+        actual = efficiency.find_common_characters(s, num)
         self.assertIsInstance(actual, list)
         self.assertEqual(sorted(actual), sorted(answer))
 
@@ -31,6 +32,7 @@ class TestEfficiency(unittest.TestCase):
         actual = efficiency.sum_to_zero(lst)
         self.assertIsInstance(actual, tuple)
         self.assertEqual(set(actual), set(answer))
+
 
 if __name__ == '__main__':
     unittest.main()

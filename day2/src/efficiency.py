@@ -1,49 +1,71 @@
+#!/usr/bin/env python
+"""Exercises to practice improving the efficiency of existing Python code."""
+
+
 from string import punctuation
 
 
-def invalid_words(wordlist, document_filename):
-    '''
-    INPUT: list, str
-    OUTPUT: int
+def find_invalid_words(valid_words, document_filename):
+    """Return a list of invalid words found in the specified file.
+
+    Parameters
+    ----------
+    valid_words : list
+    document_filename : str
+
+    Returns
+    -------
+    invalid_words : list
 
     Given a list of all the valid words and a document filename, return a list
     of words from the document that are not valid words.
-    '''
+    """
     with open(document_filename) as doc:
-        result = []
+        invalid_words = []
         for line in doc:
             words = line.strip().split()
             for word in words:
-                if word.lower().strip(punctuation) not in wordlist:
-                    result.append(word)
-        return result
+                if word.lower().strip(punctuation) not in valid_words:
+                    invalid_words.append(word)
+        return invalid_words
 
 
-def common_characters(s, num):
-    '''
-    INPUT: str, int
-    OUTPUT: list of chars
+def find_common_characters(input_string, num):
+    """Return a list of characters appearing frequently in input_string.
 
-    Return the list of characters which appear in the string s more than num
-    times.
-    '''
-    result = []
-    for char in s:
-        if s.count(char) > num:
-            if char not in result:
-                result.append(char)
-    return result
+    Parameters
+    ----------
+    input_string : str
+    num : int
+
+    Returns
+    -------
+    common_characters : list
+        List of characters appearing more than num times in input_string.
+    """
+    common_characters = []
+    for char in input_string:
+        if input_string.count(char) > num:
+            if char not in common_characters:
+                common_characters.append(char)
+    return common_characters
 
 
 def sum_to_zero(lst):
-    '''
-    INPUT: list of ints
-    OUTPUT: tuple of two ints
+    """Return a tuple of two values from the input list that sum to zero.
 
-    Return a tuple of two values from the input list that sum to zero.
-    If none exist, return None.
-    '''
+    If no such pair of values exists, return None.
 
+    Parameters
+    ----------
+    lst: list
+        List of ints.
+
+    Returns
+    -------
+    value_pair: tuple
+        Two integers.
+    """
     for i, item1 in enumerate(lst):
         for item2 in lst[i + 1:]:
             if item1 + item2 == 0:
