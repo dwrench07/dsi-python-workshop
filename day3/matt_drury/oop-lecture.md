@@ -219,7 +219,7 @@ A class is a recipe for constructing instances of that class.
 
 **Question**: In the picture below, what are the classes, and what are the instances of these classes?
 
-![Examples of Objects of Different Classes](images/classes-and-objects.png)
+![Examples of Objects of Different Classes](classes-and-objects.png)
 
 ### Example of a Class: defaultdict
 
