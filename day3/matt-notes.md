@@ -34,7 +34,7 @@ Python `list`s and `dictionary`-ies are a very useful type of data structure, an
 ### Methods
 
 ```python
-# Q: Why didn't I call it 'l', why didn't I call it 'list'
+# Q: Why didn't I call it 'l', why didn't I call it 'list'?
 lst = [1, 2, 2, 3, 4, 4, 4]
 
 # Associated algorithm: count
@@ -217,7 +217,9 @@ There are two concepts we need
   
 A class is a recipe for constructing instances of that class.
 
-![Examples of Objects of Different Classes](classes-and-objects.png)
+**Question**: In the picture below, what are the classes, and what are the instances of these classes?
+
+![Examples of Objects of Different Classes](images/classes-and-objects.png)
 
 ### Example of a Class: defaultdict
 
@@ -243,11 +245,11 @@ isinstance(D, defaultdict)
 
 We usually abbreviate the phrase
 
-    # `D` is an instance of class `defaultdict`.
+> `D` is an instance of class `defaultdict`.
 
 as
 
-    # `D` is a `defaultdict`.
+> `D` is a `defaultdict`.
 
 ### How to Store Data in a Class
 
