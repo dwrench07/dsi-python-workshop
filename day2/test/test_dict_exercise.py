@@ -1,4 +1,6 @@
-"""Unit Tests for DS python-workshop/day2."""
+"""Unit Tests for DS python-workshop/day2.
+
+Run py.test from the day2 directory."""
 
 
 from __future__ import division
