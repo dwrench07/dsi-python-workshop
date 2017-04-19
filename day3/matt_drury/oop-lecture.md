@@ -51,7 +51,7 @@ The `count` function is associated with the `list` data type.
 
 Functions that are associated to a specific data type in this way are called *methods*.  So we would say
 
-    # `count` is a method of the data type `list`
+> `count` is a method of the data type `list`
 
 Methods are (generally) called using the `.` notation:
 
@@ -59,7 +59,7 @@ Methods are (generally) called using the `.` notation:
 data_element.method(additional_arguments)
 ```
 
-### Mutability
+### Pure vs. Impure Methods
 
 Some methods actually *change* the data they operate on:
 
@@ -100,7 +100,6 @@ Some things that do not look like methods actually are, indexing for example:
 
 ```python
 print(lst[2])
-
 print(lst.__getitem__(2))
 ```
     #    2
@@ -178,12 +177,9 @@ print(D)
     #    0
     #    defaultdict(<function <lambda> at 0x104773050>, {'a': 1, 'c': 0, 'b': 2})
 
-
-Note: It's a bit weird to have to pass in a function that returns the default value instead of the default value itself, but this is needed to avoid weird problems arising from mutable objects like lists.
-
 Note: In our creation of the default dict above, the line `D = defaultdict(int, {'a': 1, 'b': 2})` is more idomatic.  We chose to write it the way we did above as it makes more explicit what is going on.
 
-In summary, this works as intended:
+Note: It's a bit weird to have to pass in a function that returns the default value instead of the default value itself, but this is needed to avoid weird problems arising from mutable objects like lists.  Passing a function guarentes that this will work:
 
 ```python
 D = defaultdict(list, {})
@@ -200,6 +196,7 @@ print(D)
     #    []
     #    defaultdict(<type 'list'>, {'a': [1, 2], 'b': [1]})
 
+A more naive implementation would result in the **same** list being shared by all keys.
 
 ## Making Your Own Default Dict
 
@@ -233,7 +230,6 @@ Using the class `defaultdict` as a function creates an instance of that class.
 
 Note: The process of using the class itself as a function is called **construction**, and in this context the class is being used as a **constructor**.  The idea is that we are "constructing" a new object whose type is the class.
 
-
 ```python
 D = defaultdict(lambda: 0, {'a': 1, 'b': 2})
 isinstance(D, defaultdict)
@@ -248,7 +244,9 @@ as
 
 > `D` is a `defaultdict`.
 
-### How to Store Data in a Class
+In this way, `defaultdict` is thought of as a **type** (or datatype).  This is analagous to the `int`s, `float`s, `string`s, etc that we base all our programs on.
+
+### Creating a Custom Class
 
 The basics of creating a custom class in python is very easy
 
@@ -265,6 +263,8 @@ isinstance(my_instance, MyClass)
     #    True
 
 This is a pretty dumb class as it stands, it cant really *do* anything.  To get something useful we have to add data and behaviour to our class.
+
+# Storing Data In A Class
 
 The first step is to determine what data we need to store.  In this case it's pretty easy, we need
 
@@ -297,7 +297,15 @@ print(MD.dictionary)
     #    0
     #    {'a': 1, 'b': 2}
 
-When we use a class, it is to create *instances of that class*, which we then work with.  We very rarely work with the class directly, and we will often be working with more than one instance of a single class.
+When we use a class like a function
+
+```python
+my_instance = MyClass()  # <- Called like a function.
+```
+
+it is to create *instances of that class*.  
+
+We will often be working with more than one instance of a single class
 
 ```python
 MD = MyDefaultDict(lambda: 0, {'a': 1, 'b': 2})
@@ -310,9 +318,9 @@ print(MD2.dictionary)
     #    {'a': 1, 'b': 2}
     #    {'a': 2, 'c': 5, 'b': 3}
 
-Note the important point: **Both** `MD` and `MD2` are instances of the **same class**, but they contain **different data**; they are **independent objects of the same type.**.
+Note the important point: **Both** `MD` and `MD2` are instances of the **same class**, but they contain **different data**; they are **independent objects of the same type**.
 
-### The self placeholder
+### The self Placeholder
 
 Inside of the code defining a class, `self` represents the instance of the class we are manipulating.
 
@@ -336,6 +344,16 @@ some_object.some_method(an_argument, another_argument)
 ```
 
 any references to `self` inside the definition of `some_method` will refer to `some_object`.
+
+So our use of self in the `__init__` method
+
+```python
+def __init__(self, default, dictionary):
+    self.default = default
+    self.dictionary = dictionary
+```
+
+Is setting up our `MyDefaultDict` objects so that, once created, each instance of `MyDefaultDict` stores both `default` and `dictionary` data.
 
 ### Adding Methods to Manipulate Data in a Class
 
@@ -471,13 +489,13 @@ It seems obvious what we should do here, the `len` of our datatype should be the
 
 Additionally, code like
 
-```
+```python
 'c' in MD
 ```
 
 and
 
-```
+```python
 for key in MD:
     print key, MD[key]
 ```
