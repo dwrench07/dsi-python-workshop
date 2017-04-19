@@ -574,7 +574,7 @@ Your task is to **implement an ordered dictionary**.  Here are some questions to
   - What methods will you need to implement.  Which one is the important one, i.e., the one that adds the new and interesting behaviour?
   - What happens if you add a key twice?  This is an edge case, which your final implementation should account for.
 
-## Non-Magic Methods
+### Non-Magic Methods
 
 It's worth mentioning that not all methods are magic.  Here is a class that represents a simple quadratic polynomial, and has an `evaluate` method, which plugs a number into the polynomial.
 
@@ -594,7 +594,7 @@ class QuadraticPolynomial(object):
         return a2 * x * x + a1 * x + a0
 ```
 
-### Programming Together
+## Programming Together
 
 1. Use the `__add__` magic method to allow something like `QuadraticPolynomial(1, 1, 1) + QuadraticPolynomial(1, 0, 1)`.  The new method should *return* another `QuadraticPolynomial`.
 
@@ -667,7 +667,7 @@ def polynomial_factory(coefficients):
                                    coefficients[2])
 ```
 
-### Exercise
+## Challange Exercise
 
 Implement a general `Polynomial` class, that can handle any degree polynomial.
 
