@@ -76,7 +76,8 @@ Note that I have to do something different if it's the first time I see the item
 ```python
     d = {}
     for i, item in enumerate(lst):
-        d[item] = d.get(item, []).append(i)
+        d[item] = d.get(item, [])
+        d[item].append(i)
     return d
 ```
 
