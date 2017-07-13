@@ -1,10 +1,10 @@
 def gcd(a, b):
-    '''
+    """
     INPUT: int, int
     OUTPUT: int
 
     Return the greatest common divisor of the two integers given.
-    '''
+    """
     while a != 0:
         c = a
         a = b % a
@@ -13,9 +13,9 @@ def gcd(a, b):
 
 
 class Fraction(object):
-    '''
+    """
     A fraction class.
-    '''
+    """
 
     def __init__(self, num, denom):
         '''

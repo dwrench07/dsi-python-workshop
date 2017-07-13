@@ -1,28 +1,33 @@
+from collections import defaultdict
+
+
 class Library(object):
-    '''
+    """
     A Library class.
-    '''
+
+    """
 
     def __init__(self, books=None):
-        '''
+        """
         INPUT:
             - books: iterable of strs (optional)
         Initialize a library with the given books. If no books given,
         initialize with no books. All books start checked in.
-        '''
+        """
+        self.users = defaultdict(set)
         if books:
             self.books = {book: None for book in books}
         else:
             self.books = dict()
 
     def checkout(self, book, name):
-        '''
+        """
         INPUT:
             - book: str
             - name: str
         Given a book and a person's name, checkout the book and return True.
         If it's not possible to checkout, do nothing and return False.
-        '''
+        """
         if book not in self.books or self.books[book]:
             # cannot checkout book
             return False
@@ -72,6 +77,20 @@ class Library(object):
         Return True iff the book is in the library.
         '''
         return book in self.books and not self.books[book]
+
+    # TODO: Add book_checkedout method
+    def books_checkedout(self, name):
+        """
+        INPUT:
+            - name: str
+        Return the list of books checked out by the given person.
+
+        To make this efficient, in the __init__ method,
+        create another instance variable called users which has every user and a set of the books they have checked out.
+        This means every time you check a book in or out you will need to update both dictionaries.
+        You might want to use a defaultdict instead of a standard dict.
+        """
+        return set(self.books)
 
     def all_books(self):
         '''

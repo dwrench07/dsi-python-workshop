@@ -1,10 +1,11 @@
-'''Unit Tests for DS python-workshop/day1
+"""Unit Tests for DS python-workshop/day1
 To run the tests: go to the root directory, day1
 run `make point`
-'''
+"""
 from __future__ import division
 import unittest as unittest
-from src.point import Point
+
+from day3.src.point import Point
 
 
 class TestPoint(unittest.TestCase):
@@ -49,8 +50,8 @@ class TestPoint(unittest.TestCase):
         self.assertEqual(actual.y, 15)
 
     def test_dist(self):
-        p1 = Point(1, 2)
-        p2 = Point(4, 6)
+        p1 = Point(1., 2)
+        p2 = Point(4., 6)
         actual = p1.dist(p2)
         answer = 5.0
         self.assertAlmostEqual(actual, answer)
