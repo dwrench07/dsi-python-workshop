@@ -121,7 +121,7 @@ class Point:
         >>> length(Point(3, 4))
         5
         """
-        return (self.x ^ 2) + (self.y ^ 2)
+        return sqrt(self.x ** 2 + self.y ** 2)
 
     @staticmethod
     def dist(other):
@@ -142,7 +142,7 @@ class Point:
         >>> dist(Point(1,1), Point(4, 5))
         5
         """
-        return None
+        return other.length()
 
 
 class Triangle:
@@ -164,8 +164,4 @@ class Triangle:
 
 
 if __name__ == '__main__':
-    obj1 = Point(3, 4)
-    obj2 = Point(1, 0)
-    obj3 = Point(3, 4)
-
-    obj1.length
+    pass

@@ -5,7 +5,7 @@ run `make point`
 from __future__ import division
 import unittest as unittest
 
-from day3.src.point import Point
+from day3.src.point import Point, Triangle
 
 
 class TestPoint(unittest.TestCase):
@@ -55,6 +55,20 @@ class TestPoint(unittest.TestCase):
         actual = p1.dist(p2)
         answer = 5.0
         self.assertAlmostEqual(actual, answer)
+
+
+class TestTriangle(unittest.TestCase):
+    def test_perimeter(self):
+        t = Triangle(1, 4, 5)
+        answer = 0.0
+        actual = t.area()
+        self.assertEqual(actual, answer)
+
+    def test_area(self):
+        t = Triangle(1, 2, 4)
+        answer = 5.0
+        actual = t.area()
+        self.assertAlmostEqual(actual, answer, actual)
 
 if __name__ == '__main__':
     unittest.main()
