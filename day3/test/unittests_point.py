@@ -50,8 +50,8 @@ class TestPoint(unittest.TestCase):
         self.assertEqual(actual.y, 15)
 
     def test_dist(self):
-        p1 = Point(1., 2)
-        p2 = Point(4., 6)
+        p1 = Point(1, 2)
+        p2 = Point(4, 6)
         actual = p1.dist(p2)
         answer = 5.0
         self.assertAlmostEqual(actual, answer)
@@ -59,16 +59,20 @@ class TestPoint(unittest.TestCase):
 
 class TestTriangle(unittest.TestCase):
     def test_perimeter(self):
-        t = Triangle(1, 4, 5)
-        answer = 0.0
-        actual = t.area()
-        self.assertEqual(actual, answer)
+        t = Triangle((1, 1), (1, 2), (3, 5))
+        a = Point(1, 1).length()
+        b = Point(1, 2).length()
+        c = Point(3, 5).length()
+        answer = a + b + c / 2
+        actual = t.perimeter()
+        self.assertAlmostEqual(actual, answer)
 
     def test_area(self):
-        t = Triangle(1, 2, 4)
-        answer = 5.0
+        t = Triangle((1, 1), (1, 2), (3, 5))
+        s = t[0].dist(t[1])
+        answer = (s * (s - a) * (s - b) * (s - c)) ** 0.5
         actual = t.area()
-        self.assertAlmostEqual(actual, answer, actual)
+        self.assertAlmostEqual(actual, answer)
 
 if __name__ == '__main__':
     unittest.main()

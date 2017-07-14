@@ -4,7 +4,7 @@
 This module contains classes to represent points and triangles in
 two-dimensional space.
 """
-
+from itertools import combinations
 from math import sqrt
 
 
@@ -12,100 +12,23 @@ class Point:
     """Represent a point in 2-dimensional space using x and y cooridnates."""
 
     def __init__(self, x, y):
-        """Initialize a Point with the given x and y coordinate values.
-
-        Parameters
-        ----------
-        x : float
-        y : float
-        """
         self.x = x
         self.y = y
 
     def __repr__(self):
-        """Return a string representation of the current Point.
-
-        Examples
-        --------
-        >>>p = Point(6, 2)
-        answer = 'Point: 6, 2'
-        """
         return f"Point: {self.x}, {self.y}"
 
     def __eq__(self, other):
-        """Return True if the coordinates of self and other are identical.
-
-        Parameters
-        ----------
-        other : Point
-
-        Examples
-        --------
-        >>> Point(1, 1) == Point(1, 1)
-        True
-        >>> Point(1, 1) == Point(3, -1)
-        False
-        """
-        if self.x == other.x and self.y == other.y:
-            return True
-        else:
-            return False
+        return self.x == other.x and self.y == other.y
 
     def __add__(self, other):
-        """Return a new Point representing the sum of self and other.
-
-        Parameters
-        ----------
-        other : Point
-
-        Examples
-        --------
-        >>> Point(1, 1) + Point(2, 3)
-        Point(3, 4)
-        >>> Point(1, 1) + Point(-1, -1)
-        Point(0, 0)
-        """
-        self.x = self.x + other.x
-        self.y = self.y + other.y
-        return self
+        return Point(self.x + other.x, self.y + other.y)
 
     def __sub__(self, other):
-        """Return a new Point representing the difference of self and other.
-
-        Parameters
-        ----------
-        other : Point
-
-        Examples
-        --------
-        >>> Point(1, 1) - Point(2, 3)
-        Point(-1, -2)
-        >>> Point(1, 1) - Point(-1, -1)
-        Point(2, 2)
-        """
-        self.x = abs(self.x - other.x)
-        self.y = abs(self.y - other.y)
-        return self
+        return Point(self.x - other.x, self.y - other.y)
 
     def __mul__(self, scale_factor):
-        """Return a new Point with coordinates multiplied by scale_factor.
-
-        Returns
-        -------
-        length : float
-
-        Examples
-        --------
-        >>> Point(1, 1) * 2
-        Point(2, 2)
-        >>> Point(-3, 5) * 3
-        Point(-9, 15)
-        >>> Point(-2, 4) * -1
-        Point(2, -4)
-        """
-        self.x = self.x * scale_factor
-        self.y = self.y * scale_factor
-        return self
+        return Point(self.x * factor, self.y * factor)
 
     def length(self):
         """Return the length of the vector from the origin to this Point.
@@ -123,45 +46,27 @@ class Point:
         """
         return sqrt(self.x ** 2 + self.y ** 2)
 
-    @staticmethod
-    def dist(other):
-        """Return the distance between this point and the other point given.
-
-        Use __sub__ and length to compute the distance.
-
-        Parameters
-        ----------
-        other : Point
-
-        Returns
-        -------
-        distance : float
-
-        Examples
-        --------
-        >>> dist(Point(1,1), Point(4, 5))
-        5
-        """
-        return other.length()
+    def dist(self, other):
+        return (self - other).length()
 
 
 class Triangle:
-    """Represent a triangle in 2-dimensional space using three Points."""
-
-    def __init__(self, *args: float):
-        """Create a new Triangle with vertices (v1, v2, v3)."""
-        v1, v2, v3 = args
-
-        self.v1 = Point.length(v1)
-        self.v2 = Point.length(v2)
-        self.v3 = Point.length(v3)
-
-    def perimeter(self):
-        return self.v1 + self.v2 + self.v3
+    def __init__(self, a, b, c):
+        if not isinstance(a, Point):
+            raise TypeError('Triangle object takes 3 Points')
+        self.a = a
+        self.b = b
+        self.c = c
+        if not self.area():
+            raise Exception('3 points for triangle in a line')
 
     def area(self):
-        return (self.v1 * self.v2) / 2
+        a, b, c = self.a, self.b, self.c
+        return abs(a.x * (b.y - c.y) + b.x * (c.y - a.y) + c.x * (a.y - b.y)) / 2.
+
+    def perimeter(self):
+        a, b, c = self.a, self.b, self.c
+        return a.dist(b) + b.dist(c) + c.dist(a)
 
 
 if __name__ == '__main__':
-    pass

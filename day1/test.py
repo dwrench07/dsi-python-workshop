@@ -1,5 +1,5 @@
 import os
-from collections import defaultdict
+from collections import defaultdict, namedtuple
 from datetime import datetime
 
 
@@ -9,6 +9,7 @@ def read_game_info():
         print("Found: {} files.".format(len(files)))
         for filename in files:
             with open(os.path.join(folder, filename), 'r') as src:
+                games = namedtuple("games", "match_date, team, opponent, team_score, opp_score")
                 file_contents = src.readlines()
                 # print(file_contents)
 
@@ -21,10 +22,10 @@ def read_game_info():
                 # Mar 29: Belize (1) - Cayman Islands (1)
                 print(f"{match_date}: {team} ({team_score}) - {opponent} ({opp_score})")
 
-                # data = defaultdict(dict)
+                data = defaultdict(dict)
                 # temp_dict = data[team]
                 #
-                # temp_dict["games"] = defaultdict(list)
+                temp_dict["games"] = game()
                 # temp_dict["games"].append(match_date, team, team_score, opponent, opp_score)
                 #
                 # temp_dict['goals'] = data[team]["goals"] + team_score
