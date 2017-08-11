@@ -33,11 +33,6 @@ class Person:
     def __init__(self, name, drink, beers):
         pass
 
-    def sing(self):
-
-
-# while
-
 
 if __name__ == '__main__':
     # Get user input
